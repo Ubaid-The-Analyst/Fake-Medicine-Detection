@@ -1,0 +1,43 @@
+The code is written in Python and is meant to be an example program for an Android app that scans images of medicine and checks whether they are authentic or not. Here's what the code does:
+
+- It imports some necessary libraries, including the PyTesseract library, which is used to extract text from images, and the requests library, which is used to send HTTP requests to an API.
+- It loads an image of the medicine using the PIL (Python Imaging Library) module, and then uses PyTesseract to extract text from the image.
+- It splits the text into separate lines and extracts the medicine name and code.
+- It sends a POST request to an API (specified by the api_url variable) with the medicine name and code as payload. The API then checks whether the medicine is authentic or not.
+- It checks the response from the API, and if the medicine is authentic, it prints "The medicine is authentic." Otherwise, it prints "The medicine is not authentic."
+
+
+
+
+**PIL IMPORT IMAGE**
+The statement from PIL import Image imports the Image class from the Python Imaging Library (PIL).
+PIL is a library for working with digital images in Python.
+It provides tools for opening, manipulating, and saving image files in various formats.
+
+When you import the Image class from PIL, you can create instances of the Image class to represent images in your Python program.
+For example, you might load an image file from disk using the open() method of the Image class, or create a new blank image using the new() method.
+
+
+
+
+**PAYLOAD VARIABLE**
+In the example code I provided, the payload variable is a Python dictionary that contains the data to be sent in the HTTP POST request to the API.
+Specifically, it contains the medicine name and code extracted from the image, which are sent as JSON data in the request.
+Here, medicine_name and medicine_code are Python variables that contain the extracted medicine name and code, respectively.
+These values are assigned as key-value pairs in the payload dictionary.
+
+Later in the code, the payload dictionary is passed as the json parameter to the requests.post() method, which sends the HTTP POST request to the API with the JSON data in the request body.
+
+Overall, the payload variable is used to store the data that needs to be sent to the API, and is constructed based on the specific requirements of the API.
+The data could be in different formats, such as JSON or XML, depending on the requirements of the API being used.
+
+
+
+
+**RESPONSE.STATUS_CODE==200:**
+In the example code I provided, response.status_code is a property of the response object returned by the requests.post() method.
+The status_code property represents the HTTP status code of the response received from the API.
+
+HTTP status codes are three-digit codes that indicate the status of a web request. A status code of 200 indicates that the request was successful and the API returned a valid response.
+Other common status codes include 404 (not found), 401 (unauthorized), 500 (internal server error), and so on.
+
